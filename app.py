@@ -208,9 +208,3 @@ def get_note():
     except Exception as e:
         logging.error(f"An error occurred: {e}")
         return jsonify({'success': False, 'message': 'An error occurred'}), 500
-
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-    app.run(debug=True)
-
